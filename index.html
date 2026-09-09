@@ -223,6 +223,91 @@
         mix-blend-mode: multiply; /* Removes the white background on dark headers */
         }
 
+
+        /* --- OFFICE LOCATION --- */
+        .location-section {
+            background: #ffffff;
+            border-radius: 6px;
+        }
+
+        .location-card {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: stretch;
+        }
+
+        .location-info,
+        .map-card {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .location-info h3,
+        .map-card h3 {
+            color: #0b1d33;
+            margin-bottom: 15px;
+        }
+
+        .location-info p {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        .location-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .map-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0b1d33, #123454);
+            color: #ffffff;
+        }
+
+        .map-card h3 {
+            color: #ffffff;
+        }
+
+        .map-card p {
+            color: #dcdcdc;
+            margin-bottom: 20px;
+        }
+
+        .map-button {
+            display: inline-block;
+            background: #00a8cc;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .map-button:hover {
+            background: #0086a3;
+        }
+
+        @media (max-width: 768px) {
+            .location-card {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .location-info,
+            .map-card {
+                padding: 24px 20px;
+            }
+        }
+
         /* --- MOBILE / RESPONSIVE STYLES --- */
         @media (max-width: 768px) {
             header {
@@ -357,6 +442,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About Us</a></li>
+                <li><a href="#location">Location</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -394,6 +480,36 @@
         <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #555;">
             <strong>Clifford Aguye & Co. (Chartered Accountants)</strong> delivers structured financial leadership and rigorous audit standards. We work directly with corporate organizations, private businesses, and institutions to establish transparent records, maximize fiscal efficiency, and navigate complex statutory requirements.
         </p>
+    </section>
+
+
+    <!-- Office Location Section -->
+    <section class="container location-section" id="location">
+        <h2 class="section-title">Visit Our Office</h2>
+
+        <div class="location-card">
+            <div class="location-info">
+                <div class="location-icon">📍</div>
+                <h3>Our Office Address</h3>
+                <p><strong>Clifford Aguye & Co. (Chartered Accountants)</strong></p>
+                <p>Rumuola–Rumukoroshe Road,<br>
+                Port Harcourt, Rivers State, Nigeria.</p>
+                <p><strong>Nearby landmarks:</strong><br>
+                Greenlife Herbal Port Harcourt and Don Kings.</p>
+            </div>
+
+            <div class="map-card">
+                <div class="location-icon">🗺️</div>
+                <h3>Find Us on Google Maps</h3>
+                <p>Get directions to our office using our exact map location.</p>
+                <a class="map-button"
+                   href="https://maps.app.goo.gl/3avsrAv9ek5kLgci8"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Open in Google Maps
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
