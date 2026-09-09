@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clifford Aguye & Co. | Chartered Accountants</title>
+    <style>
+        /* --- CSS RESET & BASE STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        /* --- NAVIGATION --- */
+        header {
+            background-color: #0b1d33;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            color: #00a8cc;
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00a8cc;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(11, 29, 51, 0.88), rgba(11, 29, 51, 0.88)), 
+                        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1350&q=80') center/cover;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin-bottom: 25px;
+            color: #dcdcdc;
+        }
+
+        .btn {
+            background-color: #00a8cc;
+            color: #ffffff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0086a3;
+        }
+
+        /* --- CONTAINER & SECTIONS --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #0b1d33;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: #00a8cc;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        /* --- SERVICES GRID --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid #00a8cc;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #0b1d33;
+            margin-bottom: 15px;
+        }
+
+        /* --- CONTACT FORM --- */
+        .contact-form {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 6px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0b1d33;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        .logo-img {
+        height: 45px;
+        width: auto;
+        object-fit: contain;
+        mix-blend-mode: multiply; /* Removes the white background on dark headers */
+        }
+</style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo-container">
+            <img src="CA&CO LOGO.PNG" alt="Clifford Aguye & Co. Logo" class="logo-img">
+            <div class="logo-text">
+                Clifford Aguye & Co.
+                <span>Chartered Accountants</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Integrity, Accuracy & Financial Excellence</h1>
+        <p>Providing statutory auditing, strategic tax advisory, and accounting solutions to help your business operate with complete legal compliance.</p>
+        <a href="#contact" class="btn">Schedule a Consultation</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container" id="services">
+        <h2 class="section-title">Our Professional Practice Area</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Statutory & Forensic Auditing</h3>
+                <p>Independent verification of financial statements, internal control assessments, and forensic accounting to safeguard business assets.</p>
+            </div>
+            <div class="service-card">
+                <h3>Tax Planning & Advisory</h3>
+                <p>Corporate tax filing, regulatory compliance, statutory remittances, and tax-saving strategies tailored for modern businesses.</p>
+            </div>
+            <div class="service-card">
+                <h3>Financial Consultancy & Reconciliation</h3>
+                <p>Comprehensive bank statement reconciliations, cash-flow forecasting, payroll processing, and structured ledger setup.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container" id="about" style="background-color: #ffffff; border-radius: 6px;">
+        <h2 class="section-title">About Clifford Aguye & Co.</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #555;">
+            <strong>Clifford Aguye & Co. (Chartered Accountants)</strong> delivers structured financial leadership and rigorous audit standards. We work directly with corporate organizations, private businesses, and institutions to establish transparent records, maximize fiscal efficiency, and navigate complex statutory requirements.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container" id="contact">
+        <h2 class="section-title">Contact Our Office</h2>
+        <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you. Clifford Aguye & Co. will reach out shortly!');">
+            <div class="form-group">
+                <label for="name">Company / Contact Name</label>
+                <input type="text" id="name" required placeholder="Enter full name or entity name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required placeholder="name@company.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Engagement Details</label>
+                <textarea id="message" required placeholder="Outline your audit, tax, or accounting requirements..."></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%;">Submit Inquiry</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Clifford Aguye & Co. (Chartered Accountants). All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
