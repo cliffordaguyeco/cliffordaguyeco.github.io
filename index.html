@@ -308,6 +308,89 @@
             }
         }
 
+
+        /* --- PHONE CONTACT --- */
+        .phone-contact {
+            max-width: 900px;
+            margin: 0 auto 28px;
+            padding: 20px 24px;
+            background: linear-gradient(135deg, #e8f8fc, #d7f1f7);
+            border-left: 5px solid #00a8cc;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+        }
+
+        .phone-contact-text {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .phone-contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #0b1d33;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+
+        .phone-contact h3 {
+            color: #0b1d33;
+            margin-bottom: 2px;
+        }
+
+        .phone-contact p {
+            color: #555;
+            margin: 0;
+        }
+
+        .phone-number {
+            display: inline-block;
+            color: #0b1d33;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .phone-number:hover {
+            color: #00a8cc;
+        }
+
+        .footer-phone {
+            display: inline-block;
+            margin-top: 7px;
+            color: #00a8cc;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .footer-phone:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .phone-contact {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 18px;
+            }
+
+            .phone-number {
+                margin-left: 62px;
+                font-size: 1.1rem;
+            }
+        }
+
         /* --- MOBILE / RESPONSIVE STYLES --- */
         @media (max-width: 768px) {
             header {
@@ -515,6 +598,18 @@
     <!-- Contact Section -->
     <section class="container" id="contact">
         <h2 class="section-title">Contact Our Office</h2>
+
+        <div class="phone-contact">
+            <div class="phone-contact-text">
+                <div class="phone-contact-icon">☎</div>
+                <div>
+                    <h3>Call Our Office</h3>
+                    <p>Speak directly with Clifford Aguye & Co. for enquiries and consultations.</p>
+                </div>
+            </div>
+            <a href="tel:+2347031381213" class="phone-number">+234 703 138 1213</a>
+        </div>
+
         <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you. Clifford Aguye & Co. will reach out shortly!');">
             <div class="form-group">
                 <label for="name">Company / Contact Name</label>
@@ -535,6 +630,7 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Clifford Aguye & Co. (Chartered Accountants). All rights reserved.</p>
+        <a href="tel:+2347031381213" class="footer-phone">📞 +234 703 138 1213</a>
     </footer>
 
 </body>
